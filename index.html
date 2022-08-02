@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="mainc.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,25 +15,56 @@
   </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+<div class="full-box">
+  <div style="justify-content: center"> 
+<p class="font-800 size28">Simple, traffic-based pricing</p>  
+ <p class="font-600 margin30 "> Sign-up for our 30-day trial. No credit card required. </p>
+</div>
+<div class="white-box">
+  <!-- <div class=""> -->
+  <p class="font-600 margin size15" > <span id="pageviews">  </span> K Pageviews</p> 
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="range-slider margin">
+    <input class="slider" type="range"  
+    min="1" max="32" value="0" step="1"  id="myRange" >
+    <div id="progress"></div>
+    <p class="font-800 dollar size40 " > $  <span  id="rangeValue" > </span> .00 <span class="font-600" id="month">/month </span></p>
   </div>
+   
+   
+  <!-- </div> -->
+<div class="flex margin"> 
+ <p class="font-600">Monthly Billing</p> 
+  <label class="switch">
+    <input type="checkbox" id="slipper">
+    <span class="slipper round"></span>
+  </label>
+ <p class="font-600"> Yearly Billing  </p> <div class="discount"> <p class="font-600 pink"> 25% </p> <p class="font-600 pink"> discount</p> </div>
+</div>
+<hr style="width:100%; margin-top: 40px; border-color: #ECF0FB;" >
+<div class=footer>
+  <div class="checks">
+<div class="div-for-check margin2">
+<i class="fa fa-check" aria-hidden="true"></i>
+ <span class="font-600">Unlimited websites</span>
+</div > 
+<div class="div-for-check">
+ <i class="fa fa-check" aria-hidden="true"></i>
+ <span class="font-600">100% data ownership</span> </div>
+ <div class="div-for-check">
+ <i class="fa fa-check" aria-hidden="true"></i>
+ <span class="font-600"> Email reports</span> </div>
+</div>
+<div class="trial">
+  <p class="font-600">Start my trial </p>  
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="main.js"></script>
+
 </body>
+
 </html>
